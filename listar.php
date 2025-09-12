@@ -1,6 +1,5 @@
 <?php
     include 'cabecalho.php';
-    
 ?>
 <body>    
     <div class="container">
@@ -23,19 +22,19 @@
                 $stmt = $pdo->query($sql);
                 while ($produto = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     echo "<tr>";
-                    echo "<td>" . $produto['id'] ." </td>";
-                    echo "<td>" . $produto['nome']  ."</td>";
-                    echo "<td>" . $produto['preco'] . " </td>";
-                    echo "<td>" . $produto['quantidade'] . "</td>";
+                    echo "<td>".$produto['id']."</td>";
+                    echo "<td>".$produto['nome']."</td>";
+                    echo "<td>".$produto['preco']."</td>";
+                    echo "<td>".$produto['quantidade']."</td>";
                     echo "
-                        <td>
-                            <div class='btn-group' role='group'>
-                                    <a href='form_atualizar.php?id=".$produto['id']." ' type='button' class='btn btn-success'>Atualizar</a>
-                                    <a href='#' type='button' class='btn btn-danger'>Apagar</a>
-                            </div>
-                        </td>
+                    <td>
+                        <div class='btn-group' role='group'>
+                            <a href='form_atualizar.php?id=".$produto['id']."' type='button' class='btn btn-primary'>Atualizar</a>
+                            <a href='#' type='button' class='btn btn-danger'>Apagar</a>
+                        </div>
+                    </td>
                     ";
-                    echo "</tr>";
+                    echo "</tr>";                                        
                 }
             ?>                                
             </tbody>
