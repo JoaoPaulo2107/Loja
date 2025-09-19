@@ -3,15 +3,16 @@
 ?>
 <body>    
     <div class="container">
-        <h2>LISTAGEM DE PRODUTOS</h2>
+        <h2>Lista de produtos</h2>
+
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">NOME</th>
-                    <th scope="col">PREÇO</th>
-                    <th scope="col">QUANTIDADE</th>
-                    <th scope="col">OPÇÕES</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Opções</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,7 +36,7 @@
                     </td>
                     ";
                     echo "</tr>";                                        
-                }
+                }                  
             ?>                                
             </tbody>
         </table>

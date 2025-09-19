@@ -1,6 +1,54 @@
 <?php
     include 'cabecalho.php';
 ?>
+<head>
+    <style>
+        body {
+            background-color: #ADD8E6;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .form-control {
+            border-radius: 4px;
+            box-shadow: none;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .mb-3 {
+            margin-bottom: 15px;
+        }
+
+        .form-control::placeholder {
+            color: #999;
+        }
+    </style>
+</head>
+
 <body>
     <div class="container">
         <h2>CADASTRO DE PRODUTO</h2>
