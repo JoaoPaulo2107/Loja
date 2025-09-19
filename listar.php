@@ -5,7 +5,7 @@
     <div class="container">
         <h2>Lista de produtos</h2>
 
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
@@ -16,7 +16,6 @@
                 </tr>
             </thead>
             <tbody>
-
             <?php
                 require 'conexao.php';
                 $sql = "SELECT * FROM produtos";
@@ -25,14 +24,12 @@
                     echo "<tr>";
                     echo "<td>".$produto['id']."</td>";
                     echo "<td>".$produto['nome']."</td>";
-                    echo "<td>".$produto['preco']."</td>";
+                    echo "<td>R$ ".number_format($produto['preco'], 2, ',', '.')."</td>";
                     echo "<td>".$produto['quantidade']."</td>";
                     echo "
                     <td>
-                        <div class='btn-group' role='group'>
-                            <a href='form_atualizar.php?id=".$produto['id']."' type='button' class='btn btn-primary'>Atualizar</a>
-                            <a href='#' type='button' class='btn btn-danger'>Apagar</a>
-                        </div>
+                        <a href='form_atualizar.php?id=".$produto['id']."' class='btn btn-primary me-2'>Atualizar</a>
+                        <a href='apagar.php?id=".$produto['id']."' class='btn btn-danger' onclick='return confirm(\"Tem certeza que deseja apagar este produto?\")'>Apagar</a>
                     </td>
                     ";
                     echo "</tr>";                                        
